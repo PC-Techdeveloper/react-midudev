@@ -15,3 +15,12 @@
 - React.useReducer: Utilizado para crear un reducer
 - React.useImperativeHandle: Utilizado para crear un manejador de manejo
 - React.useLayoutEffect: Utilizado para crear un efecto de diseño
+
+# Diferencia entre un componente y un elemento
+
+- Componentes: Es una factoría de elementos, funciones que al ejecuutarlos, crean elementos
+- Elementos: Es lo que se renderizan los componentes en react.
+
+# Props
+
+Las props son inmutables, es decir, que no se pueden modificar después de que se hayan creado. Por lo tanto, si quieres deseas una prop, debes crear una nueva prop, lo mejor es crear una constante.

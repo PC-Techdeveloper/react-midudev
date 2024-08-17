@@ -8,3 +8,10 @@ body {
   place-content: center;
   min-height: 100vh;
 }
+
+/*Estilos para el componente App a nivel de aplicación*/
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

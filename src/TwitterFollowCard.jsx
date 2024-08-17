@@ -1,12 +1,19 @@
 import './App.css'
 
 /*Reutilizando los estilos usando las props de un componente*/
-export function TwitterFollowCard({ userName, name, isFollowing }) {
+export function TwitterFollowCard({
+  userName,
+  name,
+  /*Deshabilitando la propiedad isFollowing*/
+  /* eslint-disable no-unused-vars*/
+  isFollowing,
+}) {
+  // const userName = `@${userName}` ✅ Para no modificar las props, ya que son inmutables.
   /*Imagen desde una constante ❌ No es buena práctica*/
   // const imgeSrc = `https://unavatar.io/${userName}`
 
   return (
-    /*Estilos en React: Tailwindcss, CSS Modules, Styled Components, etc...*/
+    /*Estilar en React: Tailwindcss, CSS Modules, Styled Components, etc...*/
     <article className="tw-followCard">
       <header className="tw-followCard-header">
         <img
@@ -22,7 +29,7 @@ export function TwitterFollowCard({ userName, name, isFollowing }) {
 
       <aside>
         {/*Utilzando las props del componente 🟨*/}
-        <button className="tw-followCard-button">{isFollowing}</button>
+        <button className="tw-followCard-button">Seguir</button>
       </aside>
     </article>
   )

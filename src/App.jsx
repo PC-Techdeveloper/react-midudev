@@ -14,28 +14,26 @@ import './App.css'
 // import React from 'react'
 
 export function App() {
+  /*Crenado una funciones como props*/
+  // const formatedUserName = userName => `@${userName}`
+  //Creando elementos como props
+  // const formatedUserName = <span>@midudev</span>
+
   return (
-    <>
+    /*Pasando funciones como props*/
+    /*Pasando elementos como props*/
+    <section className="App">
       <TwitterFollowCard
+        isFollowing
         userName={'midudev'}
         name={'Miguel Ángel Durán'}
-        isFollowing={'Seguir'}
       />
       <TwitterFollowCard
+        isFollowing
         userName={'pheralb'}
         name={'Pablo Hernández'}
-        isFollowing={'Seguir'}
       />
-      <TwitterFollowCard
-        userName={'elonmusk'}
-        name={'Elon Musk'}
-        isFollowing={'Seguir'}
-      />
-      <TwitterFollowCard
-        userName={'johndoe'}
-        name={'John Doe'}
-        isFollowing={'Seguir'}
-      />
-    </>
+      <TwitterFollowCard isFollowing userName={'elonmusk'} name={'Elon Musk'} />
+    </section>
   )
 }
