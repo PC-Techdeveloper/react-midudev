@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+/*
+Estilar de esta forma para React Native
+Estilos en línea: Como si fuera un objeto
+<article style={{...}}>...</article>
+*/
+
+//Importando a nivel de componente
+import { TwitterFollowCard } from './TwitterFollowCard'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+//Fragmentos:
+//Importando fragmentos para mútiples componentes
+// import { Fragment } from 'react'
+// import React from 'react'
 
+export function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TwitterFollowCard
+        userName={'midudev'}
+        name={'Miguel Ángel Durán'}
+        isFollowing={'Seguir'}
+      />
+      <TwitterFollowCard
+        userName={'pheralb'}
+        name={'Pablo Hernández'}
+        isFollowing={'Seguir'}
+      />
+      <TwitterFollowCard
+        userName={'elonmusk'}
+        name={'Elon Musk'}
+        isFollowing={'Seguir'}
+      />
+      <TwitterFollowCard
+        userName={'johndoe'}
+        name={'John Doe'}
+        isFollowing={'Seguir'}
+      />
     </>
   )
 }
-
-export default App
+  

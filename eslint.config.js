@@ -33,6 +33,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      /*Deshabilitar las prop-types con React para no ver el error: Eslint*/
+      'react/prop-types': 'off',
     },
   },
 ]
